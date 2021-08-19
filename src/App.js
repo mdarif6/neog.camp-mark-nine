@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+import "./styles.css";
 import { useEffect, useState } from "react";
 
 const initialValue = [
@@ -141,33 +141,54 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Musical Books Categories</h1>
-      <button className="btn" onClick={() => handleClick("all")}>
-        All Books
-      </button>
-      <button className="btn" onClick={() => handleClick("pop music")}>
-        pop music
-      </button>
-      <button className="btn" onClick={() => handleClick("old time music")}>
-        old time music
-      </button>
-      <button className="btn" onClick={() => handleClick("Symphony")}>
-        Symphony
-      </button>
-      <button className="btn" onClick={() => handleClick("Jazz")}>
-        Jazz
-      </button>
+      <section className="book-main">
+        <div className="book-heading">
+          <h1> 📚 Musical Books</h1>
+        </div>
+        <p className="para">Select any favorite genre to check ratings</p>
+        <div className="btn">
+          <button className="btn-upper" onClick={() => handleClick("all")}>
+            All Books
+          </button>
+        </div>
 
-      <div>
-        {books.map((book) => {
-          return (
-            <div key={book.id}>
-              {" "}
-              {book.name} {book.rating}
-            </div>
-          );
-        })}
-      </div>
+        <div className="btn">
+          <button
+            className="btn-below"
+            onClick={() => handleClick("pop music")}
+          >
+            pop music
+          </button>
+          <button
+            className="btn-below"
+            onClick={() => handleClick("old time music")}
+          >
+            old time music
+          </button>
+          <button className="btn-below" onClick={() => handleClick("Symphony")}>
+            Symphony
+          </button>
+          <button className="btn-below" onClick={() => handleClick("Jazz")}>
+            Jazz
+          </button>
+        </div>
+
+        <div className="books-output">
+          {books.map((book) => {
+            return (
+              <div key={book.id}>
+                {" "}
+                <section className="book-section">
+                  <li className="list-nonbullet">
+                    <div className="books-name">{book.name}</div>
+                    <div className="books-rating">{book.rating}</div>
+                  </li>
+                </section>
+              </div>
+            );
+          })}
+        </div>
+      </section>
     </div>
   );
 }

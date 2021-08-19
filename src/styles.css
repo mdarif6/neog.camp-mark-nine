@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+
+body {
+  font-family: "Source Code Pro", monospace;
+}
+
+:root {
+  --primary-color: #6ee7b7;
+}
+
+.book-main {
+  max-width: 500px;
+  margin: auto;
+  display: block;
+  margin-top: 3rem;
+  background-color: var(--primary-color);
+}
+
+.book-heading {
+  text-align: center;
+  padding-top: 1rem;
+}
+.para {
+  text-align: center;
+}
+
+.btn {
+  text-align: center;
+}
+
+.btn-upper {
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+.btn-upper:hover {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.btn-below {
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.btn-below:hover {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.book-section {
+  padding: 10px 16px;
+  margin: 20 px 0;
+  border-bottom: 1px solid #fafafa;
+}
+
+.book-section:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.list-nonbullet {
+  list-style: none;
+}
+.books-output {
+  text-align: center;
+  margin: 2rem;
+}
